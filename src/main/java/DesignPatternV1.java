@@ -13,5 +13,6 @@ public class DesignPatternV1 {
         localization.addObserver(observer1);
         localization.addObserver(observer2);
         localization.setLocation("@43.5249759,-70.42435,13z", date);
+
     }
 }
