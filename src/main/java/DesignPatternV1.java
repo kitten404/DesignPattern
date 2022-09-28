@@ -11,8 +11,6 @@ import Strategy.pet.Pet;
 import Strategy.pet.Treatment;
 
 import java.time.LocalDateTime;
-import java.util.Random;
-import java.util.concurrent.Flow;
 
 public class DesignPatternV1 {
     public static void main(String[] args){

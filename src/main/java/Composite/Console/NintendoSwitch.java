@@ -1,18 +1,23 @@
 package Composite.Console;
 
+import Singleton.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class NintendoSwitch implements VideoGame{
     private List<VideoGame> videoGameList;
+    private Log log;
 
     public NintendoSwitch() {
         this.videoGameList = new ArrayList<>();
+        log = Log.getInstance();
     }
 
     @Override
     public void print() {
         System.out.println("Nintendo Switch components so far");
+        this.log.info("Mostrando os componentes do video game:");
         for(VideoGame vdl : videoGameList) {
             vdl.print();
         }
