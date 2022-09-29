@@ -1,3 +1,7 @@
+import Builder.parkinglot.ApartmentParkingLotBuilder;
+import Builder.parkinglot.Director;
+import Builder.parkinglot.ShoppingParkingLot;
+import Builder.parkinglot.ShoppingParkingLotBuilder;
 import Composite.Console.ControllerOne;
 import Composite.Console.ControllerTwo;
 import Composite.Console.NintendoSwitch;
@@ -47,5 +51,20 @@ public class DesignPatternV1 {
         nintendoSwitch.remove(controllerTwo);
 
         nintendoSwitch.print();
+
+        // --- builder ---
+        var director = new Director();
+
+        var shoppingParkingLotBuilder = new ShoppingParkingLotBuilder();
+        director.buildShoppingParkingLot(shoppingParkingLotBuilder);
+        var shoppingParkingLot = shoppingParkingLotBuilder.getResult();
+        System.out.println("Shopping Parking Lot");
+        System.out.println("Area: "+shoppingParkingLot.getArea()+" LineColor: "+shoppingParkingLot.getLineColor()+" Length: "+shoppingParkingLot.getLength());
+
+        var apartmentParkingLotBuilder = new ApartmentParkingLotBuilder();
+        director.buildApartmentParkingLot(apartmentParkingLotBuilder);
+        var apartmentParkingLot = apartmentParkingLotBuilder.getResult();
+        System.out.println("Apartment Parking Lot");
+        System.out.println("Area: "+apartmentParkingLot.getArea()+" LineColor: "+apartmentParkingLot.getLineColor()+" Length: "+apartmentParkingLot.getLength());
     }
 }
