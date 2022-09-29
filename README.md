@@ -9,3 +9,5 @@ Putting in practice what i know of design patterns:
 <br />
   -> Strategy
 <br />
+  -> Builder
+<br />
